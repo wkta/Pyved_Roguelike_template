@@ -1,7 +1,7 @@
 # import inspect
 import random
 
-from . import pimodules
+from . import glvars
 from . import shared
 from . import world
 from .util import prepare_desktop_score, prepare_web_score, render_messages, render_help, render_rows_of_text, render_score_table, get_wall_tile, save_screenshot
@@ -18,7 +18,7 @@ __all__ = [
 
 
 # aliases
-pyv = pimodules.pyved_engine
+pyv = glvars.pyv
 pg = pyv.pygame
 Sprsheet = pyv.gfx.Spritesheet
 BoolMatrx = pyv.struct.BoolMatrix

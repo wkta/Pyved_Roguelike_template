@@ -1,5 +1,5 @@
 from .classes import InputBox
-from . import pimodules
+from .glvars import pyv
 from . import shared
 from . import world
 from . import systems
@@ -14,9 +14,6 @@ __all__ = [
     'TitleState',
     'ExploreState'
 ]
-
-
-pyv = pimodules.pyved_engine
 
 
 def init_images():
@@ -107,7 +104,7 @@ class DummyPrinter(pyv.EvListener):
         self.label = self.ft.render('press SPACE to play, ESC to exit game', False, pyv.pal.c64['red'])
 
     def on_paint(self, ev):
-        ev.screen.fill(pyv.pal.c64['lightgrey'])
+        ev.screen.fill(pyv.pal.c64['lightgray'])
         ev.screen.blit(self.label, (8, 48))
 
     def on_keydown(self, ev):

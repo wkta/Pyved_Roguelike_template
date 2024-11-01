@@ -1,9 +1,9 @@
 import random
 from . import shared
-from . import pimodules
+from . import glvars
 from .shared import monster_types, monster_dmg_amount, monster_hitpoints
 
-pyv = pimodules.pyved_engine
+pyv = glvars.pyv
 pyv.bootstrap_e()
 pygame = pyv.pygame
 

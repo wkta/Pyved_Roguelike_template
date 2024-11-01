@@ -1,25 +1,48 @@
 {
-    "vmlib_ver": "24_5a1",
-    "dependencies": {
-        "pyved_engine": "???"
-    },
-    "description": "this is a placeholder so you can describe your game",
-    "author": "Unknown",
-    "assets": [
-        "smallninja_sprites.json",
-        "tileset.json",
-        "roguelikecreatures.json",
-        "exit_tile.png",
-        "pot_tile.png",
-        "pixelart_font.png"
-    ],
-    "sounds": [],
-    "slug": "ecsRogue",
-    "title": "Roguelike Template",
-    "build_date": "Wed  Sep 20 15:55:17 2023",
-    "thumbnail512x384": "thumb_2.png",
-    "thumbnail512x512": "thumb_1.png",
-    "ktg_services": false,
-    "instructions": "Controls: arrow keys to move | h for Help | Space to restart/generate a new maze",
-    "game_title": "ecsRogue"
+  "vmlib_ver": "24_10a3",
+  "dependencies": {
+    "pyved_engine": [
+      "24_10a3",
+      "pyv"
+    ]
+  },
+  "description": "Example of a basic roguelike with a few assets, and score management",
+  "author": "Unknown",
+
+  "asset_list": [
+    "exit_tile.png",
+	"pot_tile.png",
+    "pixelart_font.png",
+    "roguelikecreatures.json",
+    "smallninja_sprites.json",
+    "tileset.json"
+  ],
+  "asset_base_folder": ".",
+  "sound_list": [],
+  "sound_base_folder": ".",
+  "slug": "ecsRogue",
+  "data_files": [],
+  "title": "Roguelike Template",
+  "build_date": "Fri Nov  1 10:59:20 2024",
+  "thumbnail512x384": "thumb_2.png",
+  "thumbnail512x512": "thumb_1.png",
+  "ktg_services": false,
+  "uses_challenge":false,
+  "has_game_server":false,
+  "ncr_faucet":false,
+  "game_genre": ["Experimental","Roguelike"],
+  "instructions": "Controls: arrow keys to move | h for Help | Space to restart/generate a new maze",
+  "game_title": "ecsRogue",
+  "source_files": [
+    "classes.py",
+    "gamedef.py",
+    "glvars.py",
+    "shared.py",
+    "states.py",
+    "systems.py",
+    "tile_sheet_generator.py",
+    "util.py",
+    "world.py",
+    "__init__.py"
+  ]
 }

@@ -1,8 +1,7 @@
-from . import pimodules
+from .glvars import pyv
+from . import glvars
 # from pygame_menu.examples import create_example_window
 
-
-pyv = pimodules.pyved_engine
 pyv.bootstrap_e()
 
 
@@ -10,8 +9,7 @@ from . import shared
 from .states import *  # classes: TitleState, ExploreState
 
 
-@pyv.declare_begin
-def init_game(vmst=None):
+def init(vmst=None):
     pyv.init(wcaption='Roguata')
 
     # because we use the gamestates mechanism, it is mandatory to activate pyv event system as well:
@@ -36,8 +34,7 @@ def init_game(vmst=None):
     ev_mger.update()
 
 
-@pyv.declare_update
-def upd(time_info=None):
+def update(time_info=None):
     if pyv.curr_state() == shared.GameStates.Explore:  # hacky solution,
         # because not all gamestates uses the ECS pattern,
         # hence the test w.r.t pyv.curr_state()è
@@ -52,6 +49,5 @@ def upd(time_info=None):
     pyv.flip()
 
 
-@pyv.declare_end
-def done(vmst=None):
+def close(vmst=None):
     pyv.close_game()

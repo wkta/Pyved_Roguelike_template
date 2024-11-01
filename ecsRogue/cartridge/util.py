@@ -11,11 +11,11 @@ import time
 
 from . import shared
 from . import world
-from . import pimodules
+from . import glvars
 from .shared import monster_types
 
 # alias
-pyv = pimodules.pyved_engine
+pyv = glvars.pyv
 pg = pyv.pygame
 
 

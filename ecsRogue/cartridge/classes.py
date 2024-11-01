@@ -1,8 +1,9 @@
-from . import pimodules
+from . import glvars
+from .glvars import pyv
 from . import shared
 
 
-pg = pimodules.pyved_engine.pygame
+pg = pyv.pygame
 
 
 class InputBox:

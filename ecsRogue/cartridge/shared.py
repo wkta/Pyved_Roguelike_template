@@ -1,10 +1,10 @@
 from pathlib import Path
 
-from . import pimodules
+from . import glvars
 
 
 GAME_VER = "1.1"
-pyv = pimodules.pyved_engine
+pyv = glvars.pyv
 GameStates = pyv.enum(
     'TitleScreen', 'Explore'
 )
