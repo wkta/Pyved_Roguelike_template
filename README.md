@@ -1,13 +1,13 @@
 # Pyved_Roguelike_template
 
-Sample project based on [Pyved engine](https://github.com/gaudiatech/pyved-engine) using ECS Roguelike template
+Sample project based on [Pyved engine](https://github.com/pyved-solution/pyved-engine) using ECS Roguelike template
 
 ![screenshot](/screenshots/screenshot.png)
 
-Core project is taken from engine repo [t-workshop/ECSRogue](https://github.com/gaudiatech/pyved-engine/tree/master/t-workshop/ECSRogue).
+The project you see now is basically a spin-off from one of many game templates you can find in the [General game templates index](https://github.com/pyved-solution/game-templates-index).
 
-Try it online:
-[PLAY!](https://hubertrex.github.io/Pyved_Roguelike_template/)
+Try the game online, in your browser!
+[PLAY!](https://pyvm.kata.games/play/ecsRogue)
 
 ## Features
 
@@ -49,86 +49,69 @@ Try it online:
 * add sounds (music and sfx)
 * make UI more appealing (icons, colors, menus)
 
-## Installation
+## Install the project
 
 ```bash
 # create venv
 python3 -m venv .venv
-# activate it
-# on Linux/MacOS
+
+# activate the venv
+# on Linux/MacOS:
 source .venv/bin/activate
-# on Windows
+# on Windows:
 .venv\Scripts\activate
+```
+Once done, you have to install the dependency (game engine), you will probably need the latest (dev build) version of the game engine, not the version that can be found via PyPI.
+```bash
+# let us clone the latest version of pyved-engine, install it
+cd ..
+git clone https://github.com/pyved-solution/pyved-engine.git
+cd pyved-engine
+pip install -e .
 
-# install packages
-pip install -r requirements.txt
-
+# go back to the folder where your game is stored
+cd ../Pyved_Roguelike_template
 ```
 
 ## Run
 
-Desktop mode:
+Local execution:
 
 ```bash
 # using pyved command line tools
 pyv-cli play ecsRogue
 ```
 
+If there is a problem with the built-in command line tool (`pyv-cli`) you may also run the launcher script:
+
 ```bash
-# or just like that
 cd ecsRogue
-python main.py
+python launch_game.py
 ```
+These two commands are equivalent.
 
-***
-
-Browser mode:
-
-```bash
-# from top level project folder
-pygbag --ume_block 0 ecsRogue
-```
-
-open [http://localhost:8000/]() in browser
-
-use [http://localhost:8000#debug]() to show terminal in browser - useful for troubleshooting
-
-## Deploying
+## Deploying using a web/cloud service
 
 ### To [kata.games](https://kata.games/)
 
-TODO: needs fixing, not working with the lates pyved-engine version
+Warning: that step may require fixing, as it doen't always working with the latest pyved-engine version. In the near future we will ensure that only stable versions of `pyved-engine` are used to write demos and that these versions are supported by our cloud player solution.
 
 ```bash
 pyv-cli share ecsRogue
 ```
 
-### To [itch.io](https://itch.io/)
-
-full instruction [here](https://pygame-web.github.io/wiki/pygbag/itch.io/)
-
-in short:
-
-```bash
-pygbag --ume_block 0 --archive ecsRogue
-```
-
-upload 'build/web.zip' to [itch.io](https://itch.io/) or any other hosted site.
-
-***
-
-### To GitHub pages
-
-full instruction [here](https://pygame-web.github.io/wiki/pygbag/github.io/)
-
 ## Credits
 
+Code:
+- [moonbak](https://github.com/wkta/)
+- [HubertReX](https://github.com/HubertReX/)
+
 Assets created by:
-[Pixel-boy](https://pixel-boy.itch.io/)
-[AAA](https://www.instagram.com/challenger.aaa/?hl=fr)
+- [Pixel-boy](https://pixel-boy.itch.io/)
+- [AAA](https://www.instagram.com/challenger.aaa/?hl=fr)
 
 and:
-
 [@JoeCreates](https://x.com/JoeCreates) for monsters.
 
-Patreon: [https://www.patreon.com/pixelarchipel](https://www.patreon.com/pixelarchipel)
+Patreon:<br>
+[https://www.patreon.com/pixelarchipel](https://www.patreon.com/pixelarchipel)
